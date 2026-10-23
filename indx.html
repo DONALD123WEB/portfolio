@@ -1,0 +1,537 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <style type="text/tailwindcss">
+        @custom-variant dark (&:where(.dark, .dark *));
+        .root {
+            --primary-color: #eeedf9;
+        }
+    </style>
+</head>
+
+<body class="bg-white text-slate-900 transition-colors duration-300 dark:bg-slate-900 dark:text-white">
+
+<!-- RESPONSIVE NAVIGATION -->
+<header class="sticky top-0 z-50 border-b border-gray-100 bg-white dark:border-gray-700 dark:bg-slate-900">
+
+    <nav class="relative mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 sm:py-5">
+
+        <!-- LOGO -->
+        <a href="#home" class="text-xl font-bold text-gray-900 dark:text-white sm:text-2xl">
+            My<span class="text-pink-600">Portfolio.</span>
+        </a>
+
+        <!-- DESKTOP NAVIGATION -->
+        <ul class="hidden items-center gap-8 text-sm md:flex">
+            <li><a href="#home" class="text-pink-600">Home</a></li>
+            <li><a href="#about" class="text-gray-700 transition hover:text-pink-600 dark:text-gray-300">About</a></li>
+            <li><a href="#services" class="text-gray-700 transition hover:text-pink-600 dark:text-gray-300">Services</a></li>
+            <li><a href="#work" class="text-gray-700 transition hover:text-pink-600 dark:text-gray-300">My Work</a></li>
+            <li><a href="#contact" class="text-gray-700 transition hover:text-pink-600 dark:text-gray-300">Contact</a></li>
+        </ul>
+
+        <!-- RIGHT-SIDE BUTTONS -->
+        <div class="flex items-center gap-2">
+
+            <!-- DARK MODE BUTTON -->
+            <button
+                id="theme-toggle"
+                type="button"
+                aria-label="Switch to dark mode"
+                class="rounded-full border border-gray-300 bg-gray-100 px-3 py-2 text-lg transition hover:bg-pink-100 dark:border-gray-600 dark:bg-slate-800 dark:hover:bg-slate-700"
+            >
+                ☀️
+            </button>
+
+            <!-- MOBILE MENU BUTTON -->
+            <button
+                id="menu-toggle"
+                type="button"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+                aria-controls="mobile-menu"
+                class="rounded-lg border border-gray-300 px-3 py-2 text-xl md:hidden dark:border-gray-600"
+            >
+                ☰
+            </button>
+
+        </div>
+
+        <!-- MOBILE NAVIGATION -->
+        <div
+            id="mobile-menu"
+            class="absolute left-0 top-full hidden w-full border-t border-gray-200 bg-white px-6 py-4 shadow-lg dark:border-gray-700 dark:bg-slate-900 md:hidden"
+        >
+            <ul class="flex flex-col gap-1">
+
+                <li><a href="#home" class="block rounded-lg px-4 py-3 text-pink-600 hover:bg-pink-50 dark:hover:bg-slate-800">Home</a></li>
+
+                <li><a href="#about" class="block rounded-lg px-4 py-3 hover:bg-pink-50 hover:text-pink-600 dark:hover:bg-slate-800">About</a></li>
+
+                <li><a href="#services" class="block rounded-lg px-4 py-3 hover:bg-pink-50 hover:text-pink-600 dark:hover:bg-slate-800">Services</a></li>
+
+                <li><a href="#work" class="block rounded-lg px-4 py-3 hover:bg-pink-50 hover:text-pink-600 dark:hover:bg-slate-800">My Work</a></li>
+
+                <li><a href="#contact" class="block rounded-lg px-4 py-3 hover:bg-pink-50 hover:text-pink-600 dark:hover:bg-slate-800">Contact</a></li>
+
+            </ul>
+        </div>
+
+    </nav>
+</header>
+
+    <!-- HERO SECTION -->
+    <main>
+        <section id="home" class="flex min-h-[80vh] items-center px-6 py-20">
+
+            <div class="mx-auto w-full max-w-7xl">
+
+                <p class="mb-4 text-sm tracking-widest text-gray-500 uppercase dark:text-gray-400">
+                    Welcome to my portfolio
+                </p>
+
+                <h1 class="max-w-3xl text-4xl leading-tight font-bold sm:text-5xl md:text-7xl">
+                    Hi, I'm
+                    <span class="text-pink-600">DONALD</span>
+                    <br>
+                    <span class="font-normal">Software Engineer</span>
+                </h1>
+
+                <p class="mt-6 max-w-xl font-sans text-base leading-7 text-gray-600 dark:text-gray-300">
+                    I design and develop modern digital experiences,
+                    creating beautiful and functional websites and applications.
+                </p>
+
+                <div class="mt-8 flex flex-wrap gap-4">
+
+                    <a href="#work"
+                       class="rounded-md bg-pink-600 px-6 py-3 font-sans text-sm text-white transition hover:bg-pink-700">
+                        View My Work ↗
+                    </a>
+
+                    <a href="#contact"
+                       class="rounded-md border border-gray-300 px-6 py-3 font-sans text-sm transition hover:border-pink-600 hover:text-pink-600 dark:border-gray-600">
+                        Contact Me
+                    </a>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ABOUT SECTION -->
+        <section id="about" class="bg-gray-50 px-6 py-20 md:py-28 dark:bg-slate-800">
+
+            <div class="mx-auto grid max-w-7xl items-center gap-12 md:grid-cols-2">
+
+                <div class="mx-auto w-full max-w-md">
+                    <img
+                        src="image/car.jpg.jpeg"
+                        alt="Profile photo"
+                        class="h-[450px] w-full rounded-2xl object-cover shadow-lg"
+                    >
+                </div>
+
+                <div>
+
+                    <p class="mb-3 font-sans text-sm tracking-widest text-pink-600 uppercase">
+                        Get to know me
+                    </p>
+
+                    <h2 class="mb-6 text-4xl font-bold md:text-5xl">
+                        About <span class="text-pink-600">Me</span>
+                    </h2>
+
+                    <p class="mb-5 font-sans text-base leading-8 text-gray-600 dark:text-gray-300">
+                        I am a passionate software engineer who enjoys creating
+                        modern websites and digital experiences. I focus on building
+                        interfaces that are attractive, responsive, and easy to use.
+                    </p>
+
+                    <p class="mb-8 font-sans text-base leading-8 text-gray-600 dark:text-gray-300">
+                        My goal is to combine creativity and technology to develop
+                        solutions that solve real problems and provide value to users.
+                    </p>
+
+                    <h3 class="mb-4 text-xl font-bold">My Skills</h3>
+
+                    <div class="mb-8 flex flex-wrap gap-3">
+                        <span class="rounded-full border border-pink-200 bg-white px-4 py-2 font-sans text-sm dark:border-gray-600 dark:bg-slate-900">HTML</span>
+                        <span class="rounded-full border border-pink-200 bg-white px-4 py-2 font-sans text-sm dark:border-gray-600 dark:bg-slate-900">CSS</span>
+                        <span class="rounded-full border border-pink-200 bg-white px-4 py-2 font-sans text-sm dark:border-gray-600 dark:bg-slate-900">Tailwind CSS</span>
+                        <span class="rounded-full border border-pink-200 bg-white px-4 py-2 font-sans text-sm dark:border-gray-600 dark:bg-slate-900">JavaScript</span>
+                        <span class="rounded-full border border-pink-200 bg-white px-4 py-2 font-sans text-sm dark:border-gray-600 dark:bg-slate-900">PHP</span>
+                        <span class="rounded-full border border-pink-200 bg-white px-4 py-2 font-sans text-sm dark:border-gray-600 dark:bg-slate-900">MySQL</span>
+                    </div>
+
+                    <div class="border-l-2 border-pink-600 pl-5">
+                        <p class="font-sans text-sm text-pink-600">Education</p>
+                        <h3 class="mt-1 text-lg font-bold">Software Development</h3>
+                        <p class="mt-2 font-sans text-sm leading-6 text-gray-600 dark:text-gray-300">
+                            Add your school, qualification, or relevant training here.
+                        </p>
+                    </div>
+
+                    <a href="#contact"
+                       class="mt-8 inline-block rounded-md bg-pink-600 px-6 py-3 font-sans text-sm text-white transition hover:bg-pink-700">
+                        Let's Talk ↗
+                    </a>
+
+                </div>
+            </div>
+
+        </section>
+
+        <!-- SERVICES SECTION -->
+        <section id="services" class="bg-white px-6 py-24 dark:bg-slate-900">
+
+            <div class="mx-auto max-w-7xl">
+
+                <div class="mb-14 text-center">
+                    <p class="mb-3 font-sans text-sm tracking-widest text-pink-600 uppercase">
+                        What I can do for you
+                    </p>
+
+                    <h2 class="text-4xl font-bold md:text-5xl">
+                        My <span class="text-pink-600">Services</span>
+                    </h2>
+
+                    <p class="mx-auto mt-5 max-w-2xl font-sans leading-7 text-gray-500 dark:text-gray-400">
+                        I provide creative and technical solutions to help bring
+                        your ideas to life.
+                    </p>
+                </div>
+
+                <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+
+                    <article class="group rounded-2xl border border-gray-100 bg-white p-8 shadow-sm transition duration-300 hover:-translate-y-2 hover:border-pink-200 hover:shadow-xl dark:border-gray-700 dark:bg-slate-800">
+
+                        <div class="mb-6 flex size-14 items-center justify-center rounded-xl bg-pink-50 text-3xl text-pink-600 transition group-hover:bg-pink-600 group-hover:text-white dark:bg-pink-950">
+                            &lt;/&gt;
+                        </div>
+
+                        <h3 class="mb-4 text-2xl font-bold">Web Design</h3>
+
+                        <p class="mb-6 font-sans text-sm leading-7 text-gray-500 dark:text-gray-300">
+                            I create modern, responsive websites that look great
+                            on desktops, tablets, and mobile devices.
+                        </p>
+
+                        <a href="#contact" class="inline-flex items-center gap-2 font-sans text-sm font-semibold text-pink-600 hover:text-pink-800">
+                            Learn More <span>↗</span>
+                        </a>
+
+                    </article>
+
+                    <article class="group rounded-2xl border border-gray-100 bg-white p-8 shadow-sm transition duration-300 hover:-translate-y-2 hover:border-pink-200 hover:shadow-xl dark:border-gray-700 dark:bg-slate-800">
+
+                        <div class="mb-6 flex size-14 items-center justify-center rounded-xl bg-pink-50 text-3xl text-pink-600 transition group-hover:bg-pink-600 group-hover:text-white dark:bg-pink-950">
+                            ◈
+                        </div>
+
+                        <h3 class="mb-4 text-2xl font-bold">UI/UX Design</h3>
+
+                        <p class="mb-6 font-sans text-sm leading-7 text-gray-500 dark:text-gray-300">
+                            I design clear, attractive user interfaces with
+                            intuitive navigation and a focus on user experience.
+                        </p>
+
+                        <a href="#contact" class="inline-flex items-center gap-2 font-sans text-sm font-semibold text-pink-600 hover:text-pink-800">
+                            Learn More <span>↗</span>
+                        </a>
+
+                    </article>
+
+                    <article class="group rounded-2xl border border-gray-100 bg-white p-8 shadow-sm transition duration-300 hover:-translate-y-2 hover:border-pink-200 hover:shadow-xl dark:border-gray-700 dark:bg-slate-800">
+
+                        <div class="mb-6 flex size-14 items-center justify-center rounded-xl bg-pink-50 text-3xl text-pink-600 transition group-hover:bg-pink-600 group-hover:text-white dark:bg-pink-950">
+                            📱
+                        </div>
+
+                        <h3 class="mb-4 text-2xl font-bold">App Design</h3>
+
+                        <p class="mb-6 font-sans text-sm leading-7 text-gray-500 dark:text-gray-300">
+                            I create user-friendly application interfaces
+                            designed for a smooth and engaging experience.
+                        </p>
+
+                        <a href="#contact" class="inline-flex items-center gap-2 font-sans text-sm font-semibold text-pink-600 hover:text-pink-800">
+                            Learn More <span>↗</span>
+                        </a>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- MY WORK / PROJECT GALLERY -->
+        <section id="work" class="bg-gray-50 px-6 py-24 dark:bg-slate-950">
+
+            <div class="mx-auto max-w-7xl">
+
+                <div class="mb-14 text-center">
+                    <p class="mb-3 font-sans text-sm tracking-widest text-pink-600 uppercase">
+                        My Portfolio
+                    </p>
+
+                    <h2 class="mb-5 text-4xl font-bold md:text-5xl">My Work</h2>
+
+                    <p class="mx-auto max-w-2xl text-gray-600 dark:text-gray-400">
+                        Explore some of my projects, creative ideas, and web development work.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+
+                    <article class="group overflow-hidden rounded-2xl bg-white shadow-md transition duration-300 hover:-translate-y-2 hover:shadow-xl dark:bg-slate-800">
+
+                        <div class="overflow-hidden">
+                            <img
+                                src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=900&q=80"
+                                alt="Business analytics dashboard"
+                                class="h-56 w-full object-cover transition duration-500 group-hover:scale-110"
+                            >
+                        </div>
+
+                        <div class="p-6">
+                            <p class="mb-2 text-sm font-semibold uppercase tracking-wider text-pink-600">Web Development</p>
+                            <h3 class="mb-3 text-xl font-bold">Business Dashboard</h3>
+                            <p class="mb-6 leading-7 text-gray-600 dark:text-gray-300">
+                                A modern dashboard interface designed to present business information clearly.
+                            </p>
+                            <a href="#" class="inline-flex items-center gap-2 font-semibold text-pink-600 transition hover:text-pink-700">
+                                View Project <span>↗</span>
+                            </a>
+                        </div>
+
+                    </article>
+
+                    <article class="group overflow-hidden rounded-2xl bg-white shadow-md transition duration-300 hover:-translate-y-2 hover:shadow-xl dark:bg-slate-800">
+
+                        <div class="overflow-hidden">
+                            <img
+                                src="https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&w=900&q=80"
+                                alt="Mobile application displayed on a phone"
+                                class="h-56 w-full object-cover transition duration-500 group-hover:scale-110"
+                            >
+                        </div>
+
+                        <div class="p-6">
+                            <p class="mb-2 text-sm font-semibold uppercase tracking-wider text-pink-600">App Design</p>
+                            <h3 class="mb-3 text-xl font-bold">Mobile App Interface</h3>
+                            <p class="mb-6 leading-7 text-gray-600 dark:text-gray-300">
+                                A clean, user-friendly mobile interface focused on simplicity and usability.
+                            </p>
+                            <a href="#" class="inline-flex items-center gap-2 font-semibold text-pink-600 transition hover:text-pink-700">
+                                View Project <span>↗</span>
+                            </a>
+                        </div>
+
+                    </article>
+
+                    <article class="group overflow-hidden rounded-2xl bg-white shadow-md transition duration-300 hover:-translate-y-2 hover:shadow-xl dark:bg-slate-800">
+
+                        <div class="overflow-hidden">
+                            <img
+                                src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?auto=format&fit=crop&w=900&q=80"
+                                alt="Website displayed on a computer"
+                                class="h-56 w-full object-cover transition duration-500 group-hover:scale-110"
+                            >
+                        </div>
+
+                        <div class="p-6">
+                            <p class="mb-2 text-sm font-semibold uppercase tracking-wider text-pink-600">Web Design</p>
+                            <h3 class="mb-3 text-xl font-bold">Creative Website</h3>
+                            <p class="mb-6 leading-7 text-gray-600 dark:text-gray-300">
+                                A responsive website concept combining modern layouts and attractive visuals.
+                            </p>
+                            <a href="#" class="inline-flex items-center gap-2 font-semibold text-pink-600 transition hover:text-pink-700">
+                                View Project <span>↗</span>
+                            </a>
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section id="contact" class="bg-gray-50 px-6 py-24 dark:bg-slate-950">
+
+            <div class="mx-auto max-w-7xl">
+
+                <div class="mb-14 text-center">
+                    <p class="mb-3 text-sm font-semibold uppercase tracking-widest text-pink-600">Get In Touch</p>
+                    <h2 class="mb-5 text-4xl font-bold md:text-5xl">Contact Me</h2>
+                    <p class="mx-auto max-w-2xl leading-7 text-gray-600 dark:text-gray-400">
+                        Have a project in mind or want to work together?
+                        Send me a message. I'd love to hear from you.
+                    </p>
+                </div>
+
+                <div class="grid gap-12 md:grid-cols-2">
+
+                    <div>
+                        <h3 class="mb-6 text-2xl font-bold">Let's Talk</h3>
+
+                        <p class="mb-8 leading-7 text-gray-600 dark:text-gray-400">
+                            I'm open to discussing website projects, creative ideas,
+                            and opportunities to build something great together.
+                        </p>
+
+                        <div class="mb-6 flex items-start gap-4">
+                            <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-pink-100 text-xl text-pink-600 dark:bg-pink-950">✉</div>
+                            <div>
+                                <h4 class="font-semibold">Email</h4>
+                                <p class="text-gray-600 dark:text-gray-400">yourname@example.com</p>
+                            </div>
+                        </div>
+
+                        <div class="mb-6 flex items-start gap-4">
+                            <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-pink-100 text-xl text-pink-600 dark:bg-pink-950">◈</div>
+                            <div>
+                                <h4 class="font-semibold">Location</h4>
+                                <p class="text-gray-600 dark:text-gray-400">Cameroon</p>
+                            </div>
+                        </div>
+
+                        <p class="mt-8 text-sm text-gray-500 dark:text-gray-400">
+                            Replace the example email with your real contact email.
+                        </p>
+                    </div>
+
+                    <form action="#" method="POST" class="rounded-2xl bg-white p-8 shadow-lg dark:bg-slate-800">
+
+                        <div class="mb-6">
+                            <label for="name" class="mb-2 block font-medium">Your Name</label>
+                            <input type="text" id="name" name="name" placeholder="Enter your name" required
+                                class="w-full rounded-lg border border-gray-300 bg-white px-4 py-3 text-gray-900 outline-none transition focus:border-pink-600 focus:ring-2 focus:ring-pink-200 dark:border-gray-700 dark:bg-slate-900 dark:text-white">
+                        </div>
+
+                        <div class="mb-6">
+                            <label for="email" class="mb-2 block font-medium">Your Email</label>
+                            <input type="email" id="email" name="email" placeholder="Enter your email" required
+                                class="w-full rounded-lg border border-gray-300 bg-white px-4 py-3 text-gray-900 outline-none transition focus:border-pink-600 focus:ring-2 focus:ring-pink-200 dark:border-gray-700 dark:bg-slate-900 dark:text-white">
+                        </div>
+
+                        <div class="mb-6">
+                            <label for="subject" class="mb-2 block font-medium">Subject</label>
+                            <input type="text" id="subject" name="subject" placeholder="What is your message about?" required
+                                class="w-full rounded-lg border border-gray-300 bg-white px-4 py-3 text-gray-900 outline-none transition focus:border-pink-600 focus:ring-2 focus:ring-pink-200 dark:border-gray-700 dark:bg-slate-900 dark:text-white">
+                        </div>
+
+                        <div class="mb-6">
+                            <label for="message" class="mb-2 block font-medium">Your Message</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required
+                                class="w-full resize-y rounded-lg border border-gray-300 bg-white px-4 py-3 text-gray-900 outline-none transition focus:border-pink-600 focus:ring-2 focus:ring-pink-200 dark:border-gray-700 dark:bg-slate-900 dark:text-white"></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full rounded-lg bg-pink-600 px-6 py-3 font-semibold text-white transition hover:bg-pink-700 hover:shadow-lg">
+                            Send Message →
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- FOOTER SECTION -->
+    <footer class="border-t border-gray-200 bg-white px-6 py-10 dark:border-gray-800 dark:bg-slate-900">
+
+        <div class="mx-auto max-w-7xl">
+
+
+            <div class="my-8 border-t border-gray-200 dark:border-gray-800"></div>
+
+            <div class="flex flex-col items-center justify-between gap-4 text-center text-sm text-gray-500 md:flex-row">
+                <p>© 2026 MyPortfolio. All rights reserved.</p>
+                <a href="#home" class="font-medium text-pink-600 transition hover:text-pink-700">Back to top ↑</a>
+            </div>
+
+        </div>
+
+    </footer>
+
+    <!-- BRIGHTNESS TOGGLE JAVASCRIPT -->
+    <script>
+        const themeToggle = document.getElementById("theme-toggle");
+
+        // Restore the saved theme
+        if (localStorage.getItem("theme") === "dark") {
+            document.documentElement.classList.add("dark");
+        }
+
+        updateIcon();
+
+        // Toggle between light and dark mode
+        themeToggle.addEventListener("click", function () {
+            document.documentElement.classList.toggle("dark");
+
+            const isDark = document.documentElement.classList.contains("dark");
+
+            localStorage.setItem("theme", isDark ? "dark" : "light");
+
+            updateIcon();
+        });
+
+        // Update the button icon
+        function updateIcon() {
+            const isDark = document.documentElement.classList.contains("dark");
+
+            themeToggle.textContent = isDark ? "🌙" : "☀️";
+            themeToggle.setAttribute(
+                "aria-label",
+                isDark ? "Switch to light mode" : "Switch to dark mode"
+            );
+        }
+
+// MOBILE NAVIGATION MENU
+const menuToggle = document.getElementById("menu-toggle");
+const mobileMenu = document.getElementById("mobile-menu");
+
+// Open and close the menu
+menuToggle.addEventListener("click", function () {
+    const isClosed = mobileMenu.classList.toggle("hidden");
+
+    menuToggle.textContent = isClosed ? "☰" : "✕";
+
+    menuToggle.setAttribute("aria-expanded", String(!isClosed));
+
+    menuToggle.setAttribute(
+        "aria-label",
+        isClosed ? "Open navigation menu" : "Close navigation menu"
+    );
+});
+
+// Close the menu after clicking a navigation link
+mobileMenu.querySelectorAll("a").forEach(function (link) {
+    link.addEventListener("click", function () {
+        mobileMenu.classList.add("hidden");
+        menuToggle.textContent = "☰";
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-label", "Open navigation menu");
+    });
+});
+
+    </script>
+
+</body>
+</html>
